@@ -21,6 +21,7 @@ def login(datos: LoginRequest):
         "id_usuario": usuario["id"],
         "id_rol": usuario["id_rol"],
         "rol": usuario["rol"],
+        "nombre": f'{usuario["nombres"]} {usuario["apellidos"]}',
     })
 
     modulos = rolxmodulo_repo.obtener_modulos_por_rol(usuario["id_rol"])
